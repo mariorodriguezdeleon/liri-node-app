@@ -1,0 +1,14 @@
+# Object file
+*.o
+
+# Ada Library Information
+*.ali
+
+# .EVN Information
+*.evn
+
+# DS Stores
+.DS_Store
+
+# Node Modules
+node_modules
