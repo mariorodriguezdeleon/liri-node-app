@@ -5,7 +5,7 @@
 *.ali
 
 # .EVN Information
-*.evn
+*.env
 
 # DS Stores
 .DS_Store
