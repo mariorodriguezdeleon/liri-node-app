@@ -1,4 +1,5 @@
 require("dotenv").config();
+const fs = require('fs');
 const axios = require('axios');
 const chalk = require('chalk');
 const keys = require("./keys.js");
@@ -16,19 +17,19 @@ console.log(parameter);
 
 switch (miriCommand) {
     case 'concert-this':
-        console.log(parameter[3]);
-        // concertThis(parameter); //NOT WORKING
+        console.log(parameter);
+        // concertThis(parameter); //NOT WORKING YET
         break;
     case 'spotify-this-song':
-        console.log(parameter[3]);
-        //spotifySong(parameter); //NOT WORKING
+        // console.log(parameter);
+        spotifySong(parameter); //working, but needs formatting, will use chalk
         break;
     case 'movie-this':
-        console.log(parameter[3]);
-        movieThis(parameter); // working, but needs formatting
+        console.log(parameter);
+        movieThis(parameter); // working, but needs formatting, will use chalk after Aaron mentioned it
         break;
     case 'do-what-it-says':
-        console.log(parameter[3]); //NOT STARTED
+        console.log(parameter); //NOT STARTED
         break;
     default:
         console.log('You have to give a command');
@@ -50,9 +51,11 @@ function spotifySong(parameter) {
 
   spotify.search({
     type: 'track',
-    query: searchSong
+    query: searchSong,
+    limit: 1
   }).then(function(response) {
-    console.log(response);
+    console.log(response.tracks.items[0].artists[0].name);
+    console.log(response.tracks.)
   })
   .catch(function(err){
     console.log(err);
@@ -80,5 +83,5 @@ function movieThis(parameter) {
 }
 
 function doWhatItSays(parameter) {
-  //TODO: Add logic for the command
+  //TODO: Add logic to read the random text document and have Miri do what is says.
 }
