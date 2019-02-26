@@ -41,7 +41,7 @@ switch (miriCommand) {
         console.log(parameter); //NOT COMPLETED
         break;
     default:
-        console.log('You have to give a command');
+        console.log('I\'m not a mind reader...\nYou have to give a command!');
 }
 
 
