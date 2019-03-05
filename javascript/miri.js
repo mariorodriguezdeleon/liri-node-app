@@ -1,7 +1,7 @@
 //GENERAL TODO;
 // 1. Output data to log.txt using the 'fs' module
 // 2. Do not over-write data in the log.txt file
-// 3. Use chalk to color your console output
+// 3. Use chalk to color your console outputm (cool suggestion from Aaron)
 // 4. ????
 
 require("dotenv").config();
@@ -23,7 +23,7 @@ let spotify = new Spotify(keys.spot);
 let miriCommand = process.argv[2];
 let parameter = process.argv[3];
 
-// MIRI LOGIC
+// MIRI LOGIC SWITCH
 switch (miriCommand) {
     case 'concert-this':
         // console.log(parameter);
